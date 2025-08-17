@@ -4,6 +4,7 @@
   "description": "A simple URL shortener application built with Node.js and Tailwind CSS.",
   "main": "src/server.js",
   "scripts": {
+    "build": "npm run build:css",
     "build:css": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --minify",
     "dev:css": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --watch",
     "start": "node src/server.js",
@@ -30,6 +31,6 @@
     "express",
     "tailwindcss"
   ],
-  "author": "Your Name",
+  "author": "ramonsillva",
   "license": "MIT"
 }

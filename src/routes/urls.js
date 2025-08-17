@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const router = express.Router();
-const UrlController = require('../controllers/UrlController');
+const UrlController = require('../controllers/urlController');
 const urlController = (typeof UrlController === 'function') ? new UrlController() : UrlController;
 
 // GET /api/urls/ -> serve index.html
