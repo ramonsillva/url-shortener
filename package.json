@@ -1,25 +1,33 @@
 {
   "name": "url-shortener",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/ramonsillva/url-shortener#readme",
-  "bugs": {
-    "url": "https://github.com/ramonsillva/url-shortener/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ramonsillva/url-shortener.git"
-  },
-  "license": "ISC",
-  "author": "oramon",
-  "type": "commonjs",
-  "main": "index.js",
+  "description": "A simple URL shortener application built with Node.js and Tailwind CSS.",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --minify",
+    "dev:css": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --watch",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "nanoid": "^5.1.5",
-    "sqlite3": "^5.1.7"
-  }
+    "express": "^4.17.1",
+    "prisma": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "tailwindcss": "^2.0.0",
+    "postcss": "^8.0.0"
+  },
+  "keywords": [
+    "url",
+    "shortener",
+    "nodejs",
+    "express",
+    "tailwindcss"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
